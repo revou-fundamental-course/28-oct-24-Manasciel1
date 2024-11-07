@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="">
 </head>
+
 <body>
-    
+
+    <header>
+        <h1>Kalkulator BMI</h1>
+        <p>Body Mass Index (BMI) adalah nilai yang berasal dari berat dan tinggi badan seseorang untuk menentukan apakah
+            seseorang memiliki berat badan yang sehat. Nilai ini membantu dalam memahami komposisi tubuh seseorang
+            secara lebih baik.</p>
+        <p>Kalkulator BMI ini dapat membantu Anda mengetahui apakah berat badan Anda berada dalam kategori normal,
+            kurang, atau berlebih. Mengetahui kategori BMI Anda bisa memberikan wawasan penting tentang kesehatan Anda.
+        </p>
+        <p>Masukkan tinggi dan berat badan Anda, lalu tekan tombol "Hitung BMI" untuk melihat hasilnya. Harap dicatat
+            bahwa BMI tidak selalu mencerminkan kesehatan tubuh secara keseluruhan, tetapi dapat menjadi indikator yang
+            berguna.</p>
+    </header>
+
+    <main>
+        <!-- Section Kalkulator -->
+        <section aria-labelledby="bmi-calculator">
+            <h2 id="bmi-calculator">Formulir Kalkulator BMI</h2>
+            <form id="bmi-form">
+                <fieldset>
+                    <legend>Jenis Kelamin:</legend>
+                    <label>
+                        <input type="radio" name="gender" value="male" required>
+                        Laki-laki
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female" required>
+                        Perempuan
+                    </label>
+                </fieldset>
+
+                <label for="weight">Berat Badan (kg):</label>
+                <input type="number" id="weight" name="weight" placeholder="Masukkan berat badan" required>
+
+                <label for="age">Usia:</label>
+                <input type="number" id="age" name="age" placeholder="Masukkan usia Anda" min="1" max="120" required>
+
+                <label for="height">Tinggi Badan (cm):</label>
+                <input type="number" id="height" name="height" placeholder="Masukkan tinggi badan" required>
+
+                <button type="button" id="calculate-btn">Hitung BMI</button>
+            </form>
+        </section>
+
+        <!-- Section Keterangan -->
+        <section aria-labelledby="bmi-info">
+            <h2 id="bmi-info">Informasi Tambahan</h2>
+
+            <article>
+                <h3>Keunggulan Fitur</h3>
+                <p>Kalkulator BMI ini dirancang untuk memberikan perhitungan BMI yang cepat dan mudah, dengan antarmuka
+                    yang sederhana. Anda hanya perlu memasukkan tinggi dan berat badan Anda, dan kalkulator akan
+                    memberikan hasil beserta kategori BMI Anda.</p>
+            </article>
+
+            <article>
+                <h3>Siapa yang Cocok Menggunakan Kalkulator BMI?</h3>
+                <p>Kalkulator BMI ini cocok untuk orang dewasa berusia 18 tahun ke atas yang ingin memantau berat badan
+                    dan kesehatan mereka. Namun, kalkulator ini mungkin tidak akurat untuk atlet, ibu hamil, atau orang
+                    dengan massa otot tinggi, karena BMI tidak selalu mencerminkan komposisi tubuh secara lengkap.</p>
+            </article>
+
+            <article>
+                <h3>Rumus BMI</h3>
+                <p>BMI dihitung dengan rumus sederhana berikut:</p>
+                <p><strong>BMI = Berat (kg) / (Tinggi (m) * Tinggi (m))</strong></p>
+                <p>Untuk hasil yang lebih akurat, pastikan tinggi badan diukur dalam meter. Contohnya, jika tinggi badan
+                    Anda 170 cm, konversikan ke meter dengan membaginya menjadi 1,7 m.</p>
+            </article>
+        </section>
+
+        <section aria-labelledby="bmi-result" id="bmi-result">
+            <h2 id="bmi-result">Hasil BMI</h2>
+            <table>
+                <tr>
+                    <th>Hasil BMI</th>
+                    <td id="result"></td> <!-- Tempat hasil BMI akan ditampilkan -->
+                </tr>
+                <tr>
+                    <th>Keterangan</th>
+                    <td id="detailed-result"></td> <!-- Keterangan hasil BMI lebih mendalam -->
+                </tr>
+            </table>
+        </section>
+
+        <section id="accuracy-explanation">
+            <p>
+                Kalkulator BMI ini memberikan perkiraan tentang status berat badan Anda berdasarkan rumus yang
+                menghubungkan
+                berat badan dengan tinggi badan. Namun, perlu diingat bahwa BMI tidak selalu mencerminkan kondisi tubuh
+                secara
+                akurat.
+            </p>
+            <p>
+                BMI tidak membedakan antara massa otot dan lemak tubuh. Seseorang yang berotot mungkin memiliki BMI
+                tinggi
+                meskipun memiliki persentase lemak tubuh yang rendah. Selain itu, faktor usia, jenis kelamin, dan
+                distribusi
+                lemak tubuh juga berperan penting dalam menilai kesehatan seseorang. Oleh karena itu, disarankan untuk
+                berkonsultasi dengan dokter atau profesional kesehatan untuk mendapatkan penilaian yang lebih akurat
+                tentang
+                kondisi tubuh Anda.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kalkulator BMI. Semua Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script src="js\script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,122 @@
+
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+/* Layout utama */
+header,
+main,
+footer {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Gaya header */
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Gaya form seperti tabel */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    gap: 15px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend,
+label {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #ccc;
+    border: 1px solid #999;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #bbb;
+}
+
+/* Gaya section hasil */
+#bmi-result {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+/* Gaya tabel hasil BMI */
+#bmi-result table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#bmi-result th,
+#bmi-result td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+#bmi-result th {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+/* Gaya footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+footer p {
+    margin-top: 10px;
+}
